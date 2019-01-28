@@ -1,0 +1,12 @@
+2019-01-28 17:41:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "FILM" no encontrada
+Table "FILM" not found; SQL statement:
+SELECT * FROM FILM [42102-192]
+2019-01-28 17:41:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "DIRECTOR" no encontrada
+Table "DIRECTOR" not found; SQL statement:
+SELECT * FROM DIRECTOR [42102-192]
+2019-01-28 17:43:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "ACTOR" no encontrada
+Table "ACTOR" not found; SQL statement:
+SELECT * FROM ACTOR [42102-192]
