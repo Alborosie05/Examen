@@ -1,5 +1,8 @@
 package es.salesianos.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Film extends BaseEntity{
 
 	private String title;

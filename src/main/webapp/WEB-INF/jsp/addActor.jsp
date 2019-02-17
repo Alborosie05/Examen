@@ -5,6 +5,7 @@
 <%@ page import="java.io.*,java.util.*,es.salesianos.model.*"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <html>
 <head>
@@ -12,21 +13,18 @@
 </head>
 <body>
 
-	<%
-		List<Actor> listAllActors = (List<Actor>) request.getAttribute("listAllActors");
-	%>
 
-	<form action="/actor" method="post">
-		<span>name:</span> <input type="text" name="name"> <br /> <span>year:</span>
-		<input type="text" name="year"> <br /> <input type="submit">
-	</form>
+	<form:form action="addActor" method="post" modelAttribute="actor">
+		<span>name:</span> <form:input type="text" path="name" name="name"/> <br /> <span>year:</span>
+		<form:input type="text" path="year" name="year"/> <br /> <input type="submit">
+	</form:form>
 	<br />
 
-	<form action="/actor" method="get">
+	<form action="actorAges" method="post">
 		<span>From:</span>
-		<input type="text" name="beginDate">
+		<input type="text" name="beginDate"/>
 		<span>To:</span>
-		<input type="text" name="endDate">
+		<input type="text" name="endDate"/>
 		<input type="submit">
 	</form>
 	<br />
@@ -46,7 +44,7 @@
 					<td><c:out value="${actor.cod}" /></td>
 					<td><c:out value="${actor.name}" /></td>
 					<td><c:out value="${actor.year}" /></td>
-					<td><a href="/actor?cod=${actor.cod}">Delete</a></td>
+					<td><a href="/actorDelete?cod=${actor.cod}">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

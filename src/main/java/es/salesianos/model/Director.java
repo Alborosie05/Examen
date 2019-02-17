@@ -1,5 +1,8 @@
 package es.salesianos.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Director extends BaseEntity{
 	
 	private String name;

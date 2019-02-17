@@ -3,6 +3,7 @@
 <%@ page import="java.io.*,java.util.*,es.salesianos.model.*" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,16 +12,19 @@
 </head>
 <body>
 
-<%
-List<Film> listAllFilms = (List<Film>)request.getAttribute("listAllFilms");
-%>
+
+	<form:form action="addFilm" method="post" modelAttribute="film">
+		<span>title:</span> <form:input type="text" path="title" name="title"/> <br />
+		<input type="submit">
+	</form:form>
 	
 <table border="1">
 	<thead>
 		<tr>
-			<td>Cod</td>
+			<td>CodFilm</td>
 			<td>Title</td>
-			<td>Link Actor</td>
+			<td>codDirector</td>
+			<td>Delete</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -28,7 +32,8 @@ List<Film> listAllFilms = (List<Film>)request.getAttribute("listAllFilms");
 			<tr>
 				<td><c:out value="${film.cod}"/> </td>
 				<td><c:out value="${film.title}"/> </td>
-				<td><a href="/recoveryFilm?cod=${film.cod}">Link</a></td>
+				<td><c:out value="${film.codDirector}"/> </td>
+				<td><a href="/deleteFilm?cod=${film.cod}">Delete</a> </td>
 	    	</tr>
 		</c:forEach>
 	</tbody>

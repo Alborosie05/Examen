@@ -10,8 +10,8 @@
 <body>
 <div>
 	<a href="/film">Añadir Pelicula</a><br/>
-	<a href="/actor">Añadir Actor</a><br/>
-	<a href="/director">Añadir Director</a><br/>
+	<a href="/addActorPage">Añadir Actor</a><br/>
+	<a href="/addDirectorPage">Añadir Director</a><br/>
 	<a href="/filmactor">Asociar Peliculas y Actores</a><br/>
 	<a href="/searchRole">Buscar por rol (Personaje interpretado)</a><br/>
 	<a href="/searchActor">Buscar directores con los que ha trabajado un actor</a><br/>

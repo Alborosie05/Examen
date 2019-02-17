@@ -12,10 +12,6 @@
 </head>
 <body>
 
-	<%
-		List<Actor> listAllActors = (List<Actor>)request.getAttribute("listAllActors");
-		 request.getAttribute("codFilm");
-	%>
 
 	<table border="1">
 		<thead>

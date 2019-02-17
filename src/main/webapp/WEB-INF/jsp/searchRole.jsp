@@ -11,12 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-
-	<%
-	DtoActorFilm selectFilmActor = (DtoActorFilm)request.getAttribute("selectFilmActor");
-	%>
 	
-	<form action="/searchRole" method="post">
+	<form action="/filterRole" method="post">
 	<span>Search by role: <input type="text" name="role"></span>
 	<br />
 	<input type="submit">
@@ -29,7 +25,7 @@
 			<tr>
 				<td>Film</td>
 				<td>Actor's Name</td>
-				<td>Bithdate</td>
+				<td>Birthdate</td>
 			</tr>
 		</thead>
 		<tbody>
